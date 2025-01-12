@@ -1,0 +1,1 @@
+mysqldump -u root -p V3st1g14*2019 tecsa formularios > configuracion.sql
