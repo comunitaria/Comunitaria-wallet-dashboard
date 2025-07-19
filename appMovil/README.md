@@ -1,29 +1,61 @@
-# README #
+# MonederoILLA
 
-This README would normally document whatever steps are necessary to get your application up and running.
+This is an Ionic Angular wallet app using Capacitor.
 
-### What is this repository for? ###
+---
 
-* Quick summary
-* Version
-* [Learn Markdown](https://bitbucket.org/tutorials/markdowndemo)
+## Prerequisites
 
-### How do I get set up? ###
+- **Node.js**: v18.x or v20.x (minimum required: v18)
+- **npm**: v8.x or higher
+- **Ionic CLI** (optional, for global commands):  
+  ```bash
+  npm install -g @ionic/cli
+  ```
 
-* Summary of set up
-* Configuration
-* Dependencies
-* Database configuration
-* How to run tests
-* Deployment instructions
+---
 
-### Contribution guidelines ###
+## Setup Instructions
 
-* Writing tests
-* Code review
-* Other guidelines
+1. **Clone the repository**  
+   ```bash
+   git clone <repo-url>
+   cd appMovil
+   ```
 
-### Who do I talk to? ###
+2. **Install dependencies**  
+   ```bash
+   npm install
+   ```
 
-* Repo owner or admin
-* Other community or team contact
+3. **Serve the app (development mode)**  
+   ```bash
+   npm start
+   ```
+   or
+   ```bash
+   ionic serve
+   ```
+   The app will be available at [http://localhost:4200](http://localhost:4200).
+
+4. **Build the app (production)**  
+   ```bash
+   npm run build
+   ```
+   or
+   ```bash
+   ionic build
+   ```
+
+5. **Run tests**  
+   ```bash
+   npm test
+   ```
+
+6. **Capacitor (Android/iOS builds)**  
+   After building:
+   ```bash
+   npx cap sync
+   npx cap open android   # For Android Studio
+   npx cap open ios       # For Xcode (macOS only)
+   ```
