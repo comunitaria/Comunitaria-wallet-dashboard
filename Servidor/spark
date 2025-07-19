@@ -21,6 +21,11 @@
  * this class mainly acts as a passthru to the framework itself.
  */
 
+ if (!defined('ENVIRONMENT')) {
+    define('ENVIRONMENT', getenv('CI_ENVIRONMENT') ?: 'production');
+}
+
+
 // Refuse to run when called from php-cgi
 if (strpos(PHP_SAPI, 'cgi') === 0) {
     exit("The cli tool is not supported when running php-cgi. It needs php-cli to function!\n\n");
@@ -97,3 +102,4 @@ $console->showHeader($suppress);
 $exit = $console->run();
 
 exit(is_int($exit) ? $exit : EXIT_SUCCESS);
+

@@ -17,6 +17,11 @@ define('FCPATH', __DIR__ . DIRECTORY_SEPARATOR);
 // Ensure the current directory is pointing to the front controller's directory
 chdir(FCPATH);
 
+// Define ENVIRONMENT constant from .env or default to 'production'
+if (!defined('ENVIRONMENT')) {
+    define('ENVIRONMENT', getenv('CI_ENVIRONMENT') ?: 'production');
+}
+
 /*
  *---------------------------------------------------------------
  * BOOTSTRAP THE APPLICATION
